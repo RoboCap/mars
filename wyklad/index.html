@@ -1,0 +1,245 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+
+		<title>Robocap - Programowanie Robotów</title>
+
+		<meta name="description" content="Czym jest programowanie">
+		<meta name="author" content="Łukasz Gadomski">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				  <img src="images/logoRobocap.png">
+				  <h3>Czym jest programowanie?</h3>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Programowanie to powiedzenie komputerowi co ma robić.</h2>
+					</section>
+					<section>
+						<h2>To coś jak książka kucharska i kucharz.</h2>
+					</section>
+					<section>
+						<h2>To jak uczenie kogoś jak ma się zachowywać.</h2>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Każdy element programu to kolejny krok który należy wykonać.</h2>
+					</section>
+					<section>
+						<h2>Komputery wykonują obecnie miliardy operacji na sekunde!</h2>
+					</section>
+					<section>
+						<h2>CIEKAWOSTKA: Obecnie smartfony to dużo potężniejsze komputery niż ten który został użyty aby wysłać człowieka w kosmos.</h2>
+					</section>
+				</section>
+				
+				<section>
+					<h2>O czym należy pamiętać przy programowaniu?</h2>
+				  	<ul>
+						<li class="fragment">Trzeba wiedzieć co chce się zrobić.</li>
+						<li class="fragment">Komputer sam nie wymyśli jak ma działać.</li>
+						<li class="fragment">Zrealizuje on każde polecenie. Nawet najbzdurniejsze.</li>
+						<li class="fragment">Trzeba pamiętać o rzadko spotykanych sytuacjach.</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Z A G A D K A</h2>
+						<h3>Co zrobi komputer gdy wydarzy sie sytuacja nieprzewidziana przez program?</h3>
+					</section>
+					<section>
+						<h2>Nie Wiadomo :)</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Jak programuje się komputery?</h2>
+					</section>
+					<section>
+						<h2>Programy pisane są za pomocą jednego z tzw. języków programowania</h2>
+					</section>
+					<section>
+						<h2>Językow są setki, a każdy wygląda trochę inaczej</h2>
+						<img src="images/jezyki-programowania.jpg">
+					</section>
+					<section>
+						<h2>Cel każdego z nich jest taki sam. Zamiana tego co my rozumiemy na to co rozumie komputer.</h2>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>A jak to faktycznie wygląda?</h2>
+					</section>
+					<section>
+						<pre><code>
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+	cout<<"Hello World!";
+	cin.get();
+	return 0;
+}
+						</code></pre>
+					</section>
+					<section>
+						<pre><code>
+class HelloWorldApp {
+	public static void main(String[] args) {
+		System.out.println("Hello World!"); // Display the string.
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<pre><code>
+object HelloWorld {
+  def main(args: Array[String]): Unit = {
+	println("Hello, world!")
+  }
+}
+						</code></pre>
+					</section>
+					<section>
+						<pre><code>
+segment .data
+	tekst db "Hello World!",0Dh,0Ah,"$"
+
+segment stosik stack
+	resb 64
+segment .text
+mov ax, .data
+mov ds, ax
+mov ax, stosik
+mov ss, ax
+mov dx, tekst
+mov ah, 9
+int 21h
+mov ax, 4C00h
+int 21h
+						</code></pre>
+					</section>
+					<section>
+						<h2>A może coś ciekawszego...</h2>
+					</section>
+					<section>
+						<img src="images/scratch.PNG">
+					</section>
+					<section>
+						<img src="images/mbot.PNG">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Podstawowe operacje</h2>
+					</section>
+					<section>
+						<h2>Odczyt wartości</h2>
+						<ul>
+							<li class="fragment">z czujników</li>
+							<li class="fragment">z klawiatury</li>
+							<li class="fragment">z myszki</li>
+							<li class="fragment">przycisków</li>
+							<li class="fragment">i wielu innych urządzeń</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Zapis wartości</h2>
+						<ul>
+							<li class="fragment">na monitor</li>
+							<li class="fragment">na wyświetlacz</li>
+							<li class="fragment">do urządzenia bluetooth (telefon)</li>
+							<li class="fragment">do głośnika :)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Operacje matematyczne</h2>
+						<ul>
+							<li class="fragment">dodawania</li>
+							<li class="fragment">odejmowanie</li>
+							<li class="fragment">mnożenie</li>
+							<li class="fragment">itp.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Operacje warunkówe</h2>
+						<img src="images/if.png">
+					</section>
+					<section>
+						<h2>Pętle</h2>
+						<img src="images/loop.png">
+					</section>
+				</section>
+				<section>
+					<h2>I TYM WŁAŚNIE JEST PROGRAMOWANIA</h2>
+					<h3>Wszystko inne to już tylko połączenie tych prostych elementów w coraz to ciekawsze?</h3>
+				</section>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				mouseWheel: true,
+				rollingLinks: true,
+
+				transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
