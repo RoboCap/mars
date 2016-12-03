@@ -36,8 +36,8 @@ public class App extends JPanel {
 				BufferedImage.TYPE_INT_RGB);
 		Graphics g = bufferedImage.getGraphics();
 
-		int factorY = MAP_WIDTH / legoMap.get(0).size();
-		int factorX = MAP_HEIGHT / legoMap.size();
+		int factorY = MAP_WIDTH / legoMap.get(0).size() + 1;
+		int factorX = MAP_HEIGHT / legoMap.size() + 1;
 		
 		for (int i = 0; i < legoMap.size(); i++) 
 			for (int j = 0; j < legoMap.get(i).size(); j++) {
